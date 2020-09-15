@@ -25,7 +25,7 @@
     }
     ];
     
-  users.map( x => { console.log (x.firstName + ' ' + x.lastName) } );
+  users.map( user => { console.log (`${user.firstName} ${user.lastName}`) } );
 
     
   const users2 = [
@@ -36,18 +36,18 @@
     ];
 
 
-  users2.reduce((accumulator, currentValue) => {
+  users2.reduce((acc, cur) => {
 
-  const name = currentValue.name
-  const likes = currentValue.likes
+  const name = cur.name
+  const likes = cur.likes
   const age = name.length * 10
   
   const obj = {}
   obj.[name] = likes
   obj.age = age
   
-  accumulator.push(obj)
+  acc.push(obj)
   
-  return accumulator;
+  return acc;
   
 }, []);
