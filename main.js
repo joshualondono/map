@@ -24,10 +24,10 @@
     dog:'German Shepard'
     }
     ];
-    
+
   users.map( user => { console.log (`${user.firstName} ${user.lastName}`) } );
 
-    
+
   const users2 = [
     { name: 'pan', likes: 'lasagne' },
     { name: 'lena', likes: 'wine' },
@@ -36,18 +36,20 @@
     ];
 
 
-  users2.reduce((acc, cur) => {
+const test =  users2.reduce((acc, cur) => {
 
   const name = cur.name
   const likes = cur.likes
   const age = name.length * 10
-  
+
   const obj = {}
-  obj.[name] = likes
+  obj[name] = likes
   obj.age = age
-  
+
   acc.push(obj)
-  
+
   return acc;
-  
+
 }, []);
+
+console.log(test)
